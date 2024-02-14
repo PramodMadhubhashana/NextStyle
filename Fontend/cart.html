@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+       <nav>
+        <div style="display: flex;">
+            <label style="font-size: 30px; font-weight: 600;"><a href="#" style="color: black;">NextStyle</a></label>
+        </div>
+        <div>
+            <ul style="display: flex; flex-direction: row; gap: 50px;">
+                <li><a href="#" class="list">Catogory</a></li>
+                <li><a href="#" class="list">New Arrival</ah>
+                </li>
+                <li><a href="#" class="list">Popular</a></li>
+                <li><a href="#" class="list">Contact</a></li>
+            </ul>
+        </diV>
+        
+    </nav>
+
+    <div class="cart-container">
+        <h2>Shopping Cart</h2>
+        <div class="cart-items">
+            <div class="item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4YsGROeiDVdLcw87Y2uaVJnfgMrT3ZJ1yA&usqp=CAU" alt="Product Image">
+                <div class="item-details">
+                    <h3>Product Name</h3>
+                    <p>Price: $XX.XX</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-button minus">-</button>
+                        <input type="number" class="quantity-input" value="1">
+                        <button class="quantity-button plus">+</button>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button>Remove</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <p>Total Items: 1</p>
+            <p>Total Price: $XX.XX</p>
+            <button>Checkout</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const minusButtons = document.querySelectorAll(".quantity-button.minus");
+    const plusButtons = document.querySelectorAll(".quantity-button.plus");
+    const quantityInputs = document.querySelectorAll(".quantity-input");
+
+    minusButtons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            let currentValue = parseInt(quantityInputs[index].value);
+            if (currentValue > 1) {
+                quantityInputs[index].value = currentValue - 1;
+            }
+        });
+    });
+
+    plusButtons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            let currentValue = parseInt(quantityInputs[index].value);
+            quantityInputs[index].value = currentValue + 1;
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
