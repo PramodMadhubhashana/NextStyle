@@ -69,10 +69,11 @@ li {
 }
 
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
   width: 100%;
 }
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
@@ -80,6 +81,6 @@ th, td {
 th {
   background-color: #8b8a8a;
 }
- tr:hover {
-    background-color: #8c82fc; 
-  }
+tr:hover {
+  background-color: #8c82fc;
+}
