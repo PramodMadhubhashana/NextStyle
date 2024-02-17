@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../css/client/cart.css" type="text/css">    
 </head>
 
 <body>
@@ -23,11 +23,11 @@
         </diV>
         <div style="display: flex; flex-direction: row;">
             <ul style="display: flex; flex-direction: row; gap: 20px;">
-                <li><a href="#"><img src="assets/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
+                <li><a href="#"><img src="../img/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
                 </li>
-                <li><a href="#"><img src="assets/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
-                <li><a href="#"><img src="assets/email.png" alt="email" width="24px" height="24px" /></a></li>
-                <li><a href="#"><img src="assets/user.png" alt="user" width="24px" height="24px" /></a></li>
+                <li><a href="#"><img src="../img/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
+                <li><a href="#"><img src="../img/email.png" alt="email" width="24px" height="24px" /></a></li>
+                <li><a href="#"><img src="../img/user.png" alt="user" width="24px" height="24px" /></a></li>
                 <li><button class="button-59" role="button">LogOut</button></li>
             </ul>
         </div>
@@ -61,31 +61,7 @@
             <p>Total Price: $XX.XX</p>
             <button>Checkout</button>
         </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const minusButtons = document.querySelectorAll(".quantity-button.minus");
-            const plusButtons = document.querySelectorAll(".quantity-button.plus");
-            const quantityInputs = document.querySelectorAll(".quantity-input");
-
-            minusButtons.forEach(function (button, index) {
-                button.addEventListener("click", function () {
-                    let currentValue = parseInt(quantityInputs[index].value);
-                    if (currentValue > 1) {
-                        quantityInputs[index].value = currentValue - 1;
-                    }
-                });
-            });
-
-            plusButtons.forEach(function (button, index) {
-                button.addEventListener("click", function () {
-                    let currentValue = parseInt(quantityInputs[index].value);
-                    quantityInputs[index].value = currentValue + 1;
-                });
-            });
-        });
-
-    </script>
+    </div>    
 </body>
-
+<script src="../js/client/cart.js"></script>
 </html>

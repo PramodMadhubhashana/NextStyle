@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="../css/admin/admin.css" type="text/css">
+    
 </head>
 <body>
     <nav>
@@ -26,11 +27,11 @@
         <div style="display: flex; flex-direction: row; justify-content: center; gap: 100px; padding: 50px;">
             <div class="divcart" onclick="orderList()">
                 <label style="font-size: 24px; font-weight: 550;">Order List</label>
-                <li><a href="#"><img src="assets/clipboard.png" alt="user" width="24px" height="24px"  style="padding: 10px;"/></a></li>
+                <li><a href="#"><img src="../img/clipboard.png" alt="user" width="24px" height="24px"  style="padding: 10px;"/></a></li>
             </div>
             <div class="divcart" onclick="orders()">
                 <label style="font-size: 24px; font-weight: 550;">Orders</label>
-                <li><a href="#"><img src="assets/package.png" alt="user" width="24px" height="24px"  style="padding: 10px;"/></a></li>
+                <li><a href="#"><img src="../img/package2.png" alt="user" width="24px" height="24px"  style="padding: 10px;"/></a></li>
             </div>            
         </div>
         <div style="display: flex; flex-direction: column; ">
@@ -75,23 +76,7 @@
                 </tbody>
             </table>
         </div>
-
-    </div>
-    
+    </div>    
 </body>
-
-<script>
-    function orderList(){
-        var orderList = document.getElementById("orderList"); 
-        var orders = document.getElementById("orders"); 
-        orderList.style.display = "table";
-        orders.style.display = "none";       
-    }
-    function orders(){
-        var orderList = document.getElementById("orderList"); 
-        var orders = document.getElementById("orders"); 
-        orderList.style.display = "none";
-        orders.style.display = "table";       
-    }
-</script>
+<script src="../js/admin/adminPage.js"></script>
 </html>

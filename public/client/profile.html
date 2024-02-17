@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link rel="stylesheet" href="profile.css" type="text/css">
+    <link rel="stylesheet" href="../css/client/profile.css" type="text/css">
 </head>
 
 <body>
@@ -23,11 +23,11 @@
         </diV>
         <div style="display: flex; flex-direction: row;">
             <ul style="display: flex; flex-direction: row; gap: 20px;">
-                <li><a href="##"><img src="assets/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
+                <li><a href="##"><img src="../img/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
                 </li>
-                <li><a href="#"><img src="assets/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
-                <li><a href="#"><img src="assets/email.png" alt="email" width="24px" height="24px" /></a></li>
-                <li><a href="#"><img src="assets/user.png" alt="user" width="24px" height="24px" /></a></li>
+                <li><a href="#"><img src="../img/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
+                <li><a href="#"><img src="../img/email.png" alt="email" width="24px" height="24px" /></a></li>
+                <li><a href="#"><img src="../img/user.png" alt="user" width="24px" height="24px" /></a></li>
                 <li><button class="button-59" role="button">LogOut</button></li>
             </ul>
         </div>
@@ -38,13 +38,13 @@
         </div>
         <div style="display: flex; flex-direction: row; padding-top: 50px;">
             <div style="display: flex; flex-direction: column; width: 30%; align-items: start; justify-content: start;">
-                <label class="labels"><img src="assets/user.png" alt="user" width="16px" height="16px"
+                <label class="labels"><img src="../img/user.png" alt="user" width="16px" height="16px"
                         style="padding-right: 10px;" />My Details</label>
-                <label class="labels"><img src="assets/shopping-cart.png" alt="user" width="16px" height="16px"
+                <label class="labels"><img src="../img/shopping-cart.png" alt="user" width="16px" height="16px"
                         style="padding-right: 10px;" />My Cart</label>
-                <label class="labels"><img src="assets/package.png" alt="user" width="16px" height="16px"
+                <label class="labels"><img src="../img/package.png" alt="user" width="16px" height="16px"
                         style="padding-right: 10px;" />My Orders</label>
-                <label class="labels"><img src="assets/setting.png" alt="user" width="16px" height="16px"
+                <label class="labels"><img src="../img/setting.png" alt="user" width="16px" height="16px"
                         style="padding-right: 10px;" />Account Setting</label>
             </div>
             <div
@@ -83,11 +83,5 @@
         </div>
     </div>
 </body>
-<script>
-    function editDetails() {
-        var editDetails = document.getElementById("details");
-        editDetails.style.pointerEvents = "all";        
-    }
-</script>
-
+<script src="../js/client/profile.js"></script>
 </html>
