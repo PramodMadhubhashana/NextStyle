@@ -86,6 +86,7 @@ li {
 }
 .labels:hover{
   background-color: #cecece;
+  font-size: 21px;
 }
 
 .textbox {
