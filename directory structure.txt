@@ -10,9 +10,9 @@ NextStyle/
 │   │   │   ├── log_reg.css      (CSS styles for login/register pages)
 │   │   │   └── profile.css      (CSS styles for profile page)
 │   │   ├── admin/               (admin-side CSS files)
-│   │   │   ├── add_product.css  (CSS styles for add product page)
-│   │   │   └── admin.css        (CSS styles for admin dashboard)
-│   │   └── style.css            (global CSS styles)
+│   │       ├── add_product.css  (CSS styles for add product page)
+│   │       └── admin.css        (CSS styles for admin dashboard)
+│   │              
 │   ├── js/
 │   │   ├── client/              (client-side JavaScript files)
 │   │   │   ├── cart.js          (JavaScript for cart page)
