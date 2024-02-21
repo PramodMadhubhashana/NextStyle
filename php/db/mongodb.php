@@ -1,6 +1,6 @@
 <?php 
 
-    require __DIR__ . '/../../vendor/autoload.php';
+    require_once __DIR__ . '/../../vendor/autoload.php';
 
     $host = 'mongodb://localhost:27017';
     $dbname = 'testNextstyle';
