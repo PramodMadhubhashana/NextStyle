@@ -1,17 +1,16 @@
 <?php
 
     $host = 'localhost';
-    $dbname = 'test';
+    $dbname = 'nextstyle';
     $username = 'root';
     $password = '';     
     
-    $mysqli = new mysqli($host, $username, $password, $dbname);
-
-
-    if($mysqli->connect_error) {
-        die("connection faild : " .$mysqli->connect_error);
-    }else{
-        echo "Connect to mysql database Succesfull";
-    }
-
+    try{
+        $mysqli = new mysqli($host, $username, $password, $dbname); 
+        if ($mysqli->connect_error) {
+            throw new Exception("Connection failed: " . $mysqli->connect_error);
+        }      
+    }catch (Exception $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }    
 ?>
