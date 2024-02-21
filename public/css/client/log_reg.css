@@ -20,6 +20,7 @@ body {
   background-color: #e6d5bb;
 }
 .regform {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   width: 70vh;
