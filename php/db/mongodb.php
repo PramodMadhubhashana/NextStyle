@@ -3,16 +3,14 @@
     require_once __DIR__ . '/../../vendor/autoload.php';
 
     $host = 'mongodb://localhost:27017';
-    $dbname = 'testNextstyle';
+    $dbname = 'nextstyle';
 
-    $mongoClient = new MongoDB\Client($host);
+    try{
 
-    $database = $mongoClient->$dbname;
+        $mongoClient = new MongoDB\Client($host);
+        $database = $mongoClient->$dbname;
 
-    if($database) {
-        echo "Connected to MongoDB database Successfully!.";
-    }
-    else{
-        echo "Failed to connect to MongoDB";
+    } catch (MongoDB\Driver\Exception\Exception $e) {
+        echo "Failed to connect to MongoDB: " . $e->getMessage();
     }
 ?>
