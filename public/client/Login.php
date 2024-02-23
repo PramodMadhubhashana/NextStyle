@@ -20,24 +20,27 @@
                     <label style="font-size: 30px; font-weight: 600;">Login</label>
                     <div style="padding: 15px; width: 80%;">
                         <div class="form__group field">
-                            <input type="text" class="form__field" placeholder="Email" name="Emial" id='Email' required />
+                            <input type="email" class="form__field" placeholder="Email" name="Emial" id='Email'
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
                             <label for="name" class="form__label">Email</label>
                         </div>
                         <div class="form__group field">
-                            <input type="password" class="form__field" placeholder="Password" name="Password" id='Password'
-                                required />
+                            <input type="password" class="form__field" placeholder="Password" name="Password"
+                                id='Password' required />
                             <label for="Password" class="form__label">Password</label>
                         </div>
-                        
+
                         <div style="display: flex; flex-direction: column; padding-top: 30px;">
                             <button class="button-59" type="submit">Login</button>
-                            <p style="margin-top: 20px; font-size: 16px;">Don't have an account? <a href="../client/register.html">Register here</a></p>
+                            <p style="margin-top: 20px; font-size: 16px;">Don't have an account? <a
+                                    href="../client/register.php">Register here</a></p>
                         </div>
                     </div>
                 </div>
-                
+
+
             </form>
-            
+
         </div>
 
 

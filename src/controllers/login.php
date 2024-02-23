@@ -12,25 +12,28 @@
             $userData = mysqli_fetch_assoc($user);
 
             $_SESSION['userId'] = $userData['user_id'];
-            $_SESSION['userName'] = $userData['name'];       
+            $_SESSION['userName'] = $userData['name'];  
+            $_SESSION['userAddress'] = $userData['address'];   
+            $_SESSION['userPhoneNo'] = $userData['phone_no'];   
+            $_SESSION['userEmail'] = $userData['email'];      
 
             if($userData['user_type'] == 'client'){
-
-                echo "<script>window.location.href='/public/client/home.html';</script>";
+                
+                echo "<script>window.location.href='/public/client/home.php';</script>";
             }
             elseif($userData['user_type'] == 'admin'){
 
-                echo "<script>window.location.href='/public/admin/adminPage.html';</script>";
+                echo "<script>window.location.href='/public/admin/adminPage.php';</script>";
             }
             else{
                 echo "<script>alert('Invalid email or password');";
-                echo "window.location.href='/public/client/Login.html';</script>";
+                echo "window.location.href='/public/client/Login.php';</script>";
                 exit;     
             }
         }
         else {
             echo "<script>alert('Invalid email or 111password');";
-            echo "window.location.href='/public/client/Login.html';</script>";
+            echo "window.location.href='/public/client/Login.php';</script>";
             exit;
         }
     }

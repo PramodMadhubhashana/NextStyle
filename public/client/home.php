@@ -12,7 +12,8 @@
 <body>
     <nav>
         <div style="display: flex;">
-            <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.html" style="color: black;">NextStyle</a></label>
+            <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.php"
+                    style="color: black;">NextStyle</a></label>
         </div>
         <div>
             <ul style="display: flex; flex-direction: row; gap: 50px;">
@@ -24,18 +25,30 @@
         </diV>
         <div style="display: flex; flex-direction: row;">
             <ul style="display: flex; flex-direction: row; gap: 20px;">
-                <li><a href="#"><img src="../img/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
+                <li><a href="cart.php"><img src="../img/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
                 </li>
                 <li><a href="#"><img src="../img/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
                 <li><a href="#"><img src="../img/email.png" alt="email" width="24px" height="24px" /></a></li>
-                <li><a href="profile.html"><img src="../img//user.png" alt="user" width="24px" height="24px" /></a></li>
-                <a href="../client/login.html">
-                <li><button class="button-59" role="button">LogOut</button></li></a>
+                <li><a href="profile.php"><img src="../img//user.png" alt="user" width="24px" height="24px" /></a></li>
+                <a href="../client/login.php">
+                    <li><button class="button-59" role="button">LogOut</button></li>
+                </a>
             </ul>
         </div>
     </nav>
 
     <div style="display: flex; flex-direction: column;">
+        
+        <div style="font-size: 20px; font-weight: 600; margin-left: 20px ">
+            <?php
+                session_start();
+                if(isset($_SESSION['userName'])) {
+                    echo "<p>Welcome, " . $_SESSION['userName'] . "!</p>";
+                } else {
+                    echo "<p>Welcome, Guest!</p>";
+                }
+            ?>
+        </div>
 
         <div style="display: flex; align-items: center; width: 100%; justify-content: center; margin-top: 70px;">
             <label style="font-size: 36px; font-weight: 600;">Product List</label>
@@ -574,6 +587,7 @@
 
         </div>
     </div>
+
 </body>
 <script src="../js/client/home.js"></script>
 

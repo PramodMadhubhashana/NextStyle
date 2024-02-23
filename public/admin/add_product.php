@@ -40,6 +40,9 @@
                 <label style="font-size: 20px;font-weight: 300; padding: 10px;">Enter Unit Price</label>
                 <input type="number" placeholder="Product Name" class="textbox" name="Price" id="Price" required>
 
+                <label style="font-size: 20px;font-weight: 300; padding: 10px;">Product Image</label>
+                <input type="number" placeholder="Enter Product Image Path" class="textbox" name="Price" id="Price" required>
+
                 <div style="padding: 10px; width: 100%; display: flex; justify-content: center;">
                     <button class="button-59" role="button">Add</button>
                 </div>
