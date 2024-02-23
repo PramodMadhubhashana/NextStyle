@@ -8,7 +8,7 @@
 
         if($check_Email){
             echo "<script>alert('Email is already in use. Please choose a different email.');";
-            echo "window.location.href='/public/client/register.html';</script>";
+            echo "window.location.href='/public/client/register.php';</script>";
             exit;     
         }
         else {
@@ -17,12 +17,12 @@
             if($result){
                 ob_start();
                 sleep(2);
-                echo "<script>window.location.href='/public/client/Login.html';</script>";
+                echo "<script>window.location.href='/public/client/Login.php';</script>";
                 exit;        
             }
             else{
                 echo "<script>alert('Register Fail Try Again Later...');";
-                echo "window.location.href='/public/client/register.html';</script>";
+                echo "window.location.href='/public/client/register.php';</script>";
                 exit;     
             }    
         }  

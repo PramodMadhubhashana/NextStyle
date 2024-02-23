@@ -11,7 +11,8 @@
 <body>
     <nav>
         <div style="display: flex;">
-            <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.html" style="color: black;">NextStyle</a></label>
+            <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.php"
+                    style="color: black;">NextStyle</a></label>
         </div>
         <div>
             <ul style="display: flex; flex-direction: row; gap: 50px;">
@@ -27,12 +28,14 @@
                 </li>
                 <li><a href="#"><img src="../img/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
                 <li><a href="#"><img src="../img/email.png" alt="email" width="24px" height="24px" /></a></li>
-                <li><a href="profile.html"><img src="../img/user.png" alt="user" width="24px" height="24px" /></a></li>
-                <a href="../client/login.html">
-                    <li><button class="button-59" role="button">LogOut</button></li></a>
+                <li><a href="profile.php"><img src="../img/user.png" alt="user" width="24px" height="24px" /></a></li>
+                <a href="../client/login.php">
+                    <li><button class="button-59" role="button">LogOut</button></li>
+                </a>
             </ul>
         </div>
     </nav>
+
     <div style="display: flex; flex-direction: column;margin: 100px 100px 0 100px;">
         <div>
             <label style="font-size: 30px; font-weight: 600;">My Acccount</label>
@@ -45,7 +48,7 @@
                         style="padding-right: 10px;" />My Cart</label>
                 <label class="labels"><img src="../img/package.png" alt="user" width="16px" height="16px"
                         style="padding-right: 10px;" />My Orders</label>
-                         
+
                 <label class="labels"><img src="../img/setting.png" alt="user" width="16px" height="16px"
                         style="padding-right: 10px;" />Account Setting</label>
             </div>
@@ -69,14 +72,20 @@
 
                 </div>
                 <div style="pointer-events:none;" id="details">
+                    <?php session_start(); ?>
+
                     <label>Name</label>
-                    <input type="text" class="textbox" name="Name" id="Name" required />
+                    <input type="text" class="textbox" name="Name" id="Name"
+                        value="<?php echo $_SESSION['userName']; ?>" required />
                     <label>Address</label>
-                    <input type="text" class="textbox" name="Address" id="Address" required />
+                    <input type="text" class="textbox" name="Address" id="Address"
+                        value="<?php echo $_SESSION['userAddress']; ?>" required />
                     <label>Phone Number</label>
-                    <input type="text" class="textbox" name="PhoneNo" id="PhoneNO" required />
+                    <input type="text" class="textbox" name="PhoneNo" id="PhoneNO"
+                        value="<?php echo $_SESSION['userPhoneNo']; ?>" required />
                     <label>Email</label>
-                    <input type="text" class="textbox" name="Email" id="Email" required />
+                    <input type="text" class="textbox" name="Email" id="Email" 
+                        value="<?php echo $_SESSION['userEmail']; ?>" required />
                 </div>
                 <div style="padding: 10px; width: 100%; display: flex; justify-content: center;">
                     <button class="button-59" role="button">Save Changes</button>
@@ -86,4 +95,5 @@
     </div>
 </body>
 <script src="../js/client/profile.js"></script>
+
 </html>

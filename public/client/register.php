@@ -46,7 +46,7 @@
                         <div style="display: flex; flex-direction: column; padding-top: 30px;">
                             <button class="button-59" type="submit">Register</button>
                             <p style="margin-top: 20px; font-size: 16px;">Already have an account? <a
-                                href="login.html">Log in here</a></p>
+                                href="login.php">Log in here</a></p>
                         </div>
                     </div>
                 </div>
