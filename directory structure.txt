@@ -51,8 +51,10 @@ NextStyle/
 │       └── edit_product.php
 ├── src/                         (server-side PHP source code)
 │   ├── controllers/             (PHP controllers)
+│   │   └── controller.php       (Controller file)
 │   ├── models/                  (PHP model classes)
-│   └── views/                    (PHP view files)
+│   │   └── models.php           (Models file)
+│   └── views/                   (PHP view files)
 ├── templates/                   (HTML templates, if using a templating engine)
 ├── composer.json
 ├── composer.lock
