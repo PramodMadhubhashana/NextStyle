@@ -19,14 +19,20 @@
             exit; 
         }
     }
+    
 
     function cartList($userId){
 
         require_once '../../src/models/itemlist.php';
+
+        global $itemCount;
+        global $totalPrice;
         
         $cartList = getcartList($userId);
         $index = 0 ;
-        foreach ($cartList as $item){            
+
+        foreach ($cartList as $item){
+                      
             ?>           
                 <div class="item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4YsGROeiDVdLcw87Y2uaVJnfgMrT3ZJ1yA&usqp=CAU"
@@ -47,8 +53,19 @@
                         </div>
                 </div>            
             <?php
-            $index++;
+            $index++;  
+            $itemCount += intval($item['quantity']);              
+            $totalPrice += intval($item['quantity']) * intval($item['Price']);
+            
         } 
         
+        ?>
+            <div class="cart-summary">
+                <h3>Cart Summary</h3>
+                <p>Total Items: <?php echo $itemCount ?></p>
+                <p>Total Price: $ <?php echo $totalPrice ?></p>
+                <button>Checkout</button>
+            </div>
+        <?php
     }
 ?>

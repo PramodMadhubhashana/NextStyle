@@ -21,10 +21,8 @@
                                 <label style="font-size: 16px; font-weight: 600; padding: 20px 0 20px 0;"><?php echo '$ ' . $row['unitPrice']?></label>
                             </div>
                             <div>                                
-                                <div class="quantity-selector">
-                                    <button class="quantity-button minus">-</button>
-                                    <input type="number" class="quantity-input" value="1" name="qty">
-                                    <button class="quantity-button plus">+</button>
+                                <div class="quantity-selector">                                    
+                                    <input type="number" class="quantity-input" value="1" name="qty" min="1">                                    
                                 </div>
                             </div>
                             
