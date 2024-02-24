@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="../css/client/cart.css" type="text/css">    
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/client/pay.css" type="text/css">
 </head>
 
 <body>
-    <nav>
+<nav>
         <div style="display: flex;">
             <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.php" style="color: black;">NextStyle</a></label>
         </div>
@@ -36,17 +36,30 @@
         
     </nav>
 
-    <div class="cart-container">
-        <h2>Shopping Cart</h2>
-        <div class="cart-items">
-            <?php
-                require_once '../../src/controllers/cart.php';
-                session_start();
-                cartList($_SESSION['userId']);            
-            ?>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <div class="credit-card-details">
+            <h3>Enter Credit Card Details</h3>
+            <div class="form-group">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" placeholder="Enter card number">
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="CVV">
+            </div>
         </div>
-        
-    </div>    
+        <div class="total-amount">
+            <h3>Total Amount:</h3>
+            <p>$100.00</p> 
+        </div>
+        <button id="pay-button">Pay Now</button>
+    </div>
+<script src="../js/client/pay.js"></script>
 </body>
-<script src="../js/client/cart.js"></script>
+
 </html>
