@@ -45,12 +45,7 @@
                 cartList($_SESSION['userId']);            
             ?>
         </div>
-        <div class="cart-summary">
-            <h3>Cart Summary</h3>
-            <p>Total Items: 1</p>
-            <p>Total Price: $XX.XX</p>
-            <button>Checkout</button>
-        </div>
+        
     </div>    
 </body>
 <script src="../js/client/cart.js"></script>
