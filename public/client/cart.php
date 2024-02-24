@@ -65,5 +65,5 @@
         </div>
     </div>    
 </body>
-<script src="../js/client/cart.js"></script>
+<script src="../js/client/cart.js"></>
 </html>
