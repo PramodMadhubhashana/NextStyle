@@ -39,23 +39,11 @@
     <div class="cart-container">
         <h2>Shopping Cart</h2>
         <div class="cart-items">
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4YsGROeiDVdLcw87Y2uaVJnfgMrT3ZJ1yA&usqp=CAU"
-                    alt="Product Image">
-                <div class="item-details">
-                    <h3>Product Name</h3>
-                    <p>Price: $XX.XX</p>
-                    <div class="quantity-selector">
-                        <button class="quantity-button minus">-</button>
-                        <input type="number" class="quantity-input" value="1">
-                        <button class="quantity-button plus">+</button>
-                    </div>
-                </div>
-                <div class="item-actions">
-                    <button>Remove</button>
-                </div>
-            </div>
-
+            <?php
+                require_once '../../src/controllers/cart.php';
+                session_start();
+                cartList($_SESSION['userId']);            
+            ?>
         </div>
         <div class="cart-summary">
             <h3>Cart Summary</h3>
@@ -65,5 +53,5 @@
         </div>
     </div>    
 </body>
-<script src="../js/client/cart.js"></>
+<script src="../js/client/cart.js"></script>
 </html>

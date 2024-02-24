@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script src="../js/client/home.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -269,9 +269,8 @@
                 <div style="display: flex; flex-wrap: wrap; justify-content:space-between; margin-top: 50px; align-items: start;">  
 
                     <?php                    
-                        require_once '../../src/controllers/home.php'; 
-
-                        itemlist();
+                        require_once '../../src/controllers/home.php';                         
+                        itemlist($_SESSION['userId']);
                     ?>             
                 </div>
             </div>

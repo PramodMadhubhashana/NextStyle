@@ -2,7 +2,7 @@
 
     require_once '../../src/models/itemlist.php';
 
-    function itemlist() {
+    function itemlist($userId) {
 
         $itemlist = itemdetails();
 
@@ -10,12 +10,24 @@
 
             while ($row = mysqli_fetch_assoc($itemlist)) {                
 
-                ?>
+                ?>                    
                     <div class="itemlist">
                         <div style="height: 200px;"></div>
-                        <div style="padding:20px; display: flex; flex-direction: column;">
-                            <label style="font-size: 16px;"><?php echo $row['proName']; ?></label>
-                            <label style="font-size: 16px; font-weight: 600; padding-top: 20px;"><?php echo $row['unitPrice']?></label>
+                        <form method="post" name="itemdetails" 
+                            action="../../php/client/cart.php?proId=<?php echo $row['proId'];?>&prc=<?php echo $row['unitPrice'];?>&nme=<?php echo $row['proName'];?>&uId=<?php echo $userId;?>">
+                        <div style="padding:20px; display: flex; flex-direction:column;  justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column;">
+                                <label style="font-size: 16px;"><?php echo $row['proName']; ?></label>
+                                <label style="font-size: 16px; font-weight: 600; padding: 20px 0 20px 0;"><?php echo '$ ' . $row['unitPrice']?></label>
+                            </div>
+                            <div>                                
+                                <div class="quantity-selector">
+                                    <button class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" value="1" name="qty">
+                                    <button class="quantity-button plus">+</button>
+                                </div>
+                            </div>
+                            
                         </div>                        
                         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 0 10px 0 10px;">
                             <div class="checkbox-wrapper-30" style="display: flex; flex-direction: column;">
@@ -77,14 +89,13 @@
                             </div>
                         </div>
                         <div style="padding: 20px 10px 0 10px; display: flex; justify-content: space-between;">
-                            <button class="button-32" role="button" style="background-color: #82b53f; ">
-                                <a  style="text-decoration: none; color: black;" <a href="../../php/client/cart.php?proId=<?php echo $row['proId']; ?>">Add to cart </a></button>
+                            <button class="button-32" role="button" style="background-color: #82b53f; " type="submit" >Add to cart </button>
                             
                         </div>
                         <div style="padding: 5px 10px 0 10px ; display: flex; justify-content: space-between;">
                             <button class="button-32" style="background-color: gray;" role="button">Buy</button>
                         </div>
-
+            </form>
                     </div>
                 <?php
             }
@@ -92,5 +103,6 @@
         else {
             echo "<script>alert('Error ! Try again Later...');</script>";
         }
+        
     }
 ?>
