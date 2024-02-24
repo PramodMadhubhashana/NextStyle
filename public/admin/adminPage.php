@@ -13,7 +13,7 @@
             <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.html" style="color: black;">NextStyle</a></label>
         </div> 
         <div>
-            <label style="font-size: 20px; font-weight: 600;"><a href="#" style="text-decoration: none; color: black;">Add Products</a></label>
+            <label style="font-size: 20px; font-weight: 600;"><a href="../admin/add_product.php" style="text-decoration: none; color: black;">Add Products</a></label>
         </div>  
         <div>
             <a href="../client/login.html">

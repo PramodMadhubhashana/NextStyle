@@ -14,7 +14,7 @@
             <label style="font-size: 30px; font-weight: 600; text-decoration: underline;">NextStyle</label>
         </div>
         <div>
-            <form action="../../php/admin/adminreg.php" method="post" name="registerForm">
+            <form action="../../php/admin/adminreg.php" method="post" name="registerForm" autocomplete="off">
                 <div class="regform">
                     <label style="font-size: 18px; font-weight: 300; padding: 15px 0 15px 0;">Welcome Back !!!</label>
                     <label style="font-size: 30px; font-weight: 600;">Admin Register</label>
