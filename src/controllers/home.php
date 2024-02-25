@@ -93,7 +93,7 @@
                                 
                             </div>
                             <div style="padding: 5px 10px 0 10px ; display: flex; justify-content: space-between;">
-                                <button class="button-32" style="background-color: gray;" role="button">Buy</button>
+                                <button class="button-32" style="background-color: gray;" role="button"><a href="../../public/client/pay.php" style="text-decoration: none; color: black;">Buy</a></button>
                             </div>
                         </form>
                     </div>

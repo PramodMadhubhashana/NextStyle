@@ -45,4 +45,15 @@
 
         return $result;
     }
+
+    function orderPayments($orderID, $paymthd){
+        global $mysqli;
+
+        $sql = "INSERT INTO orderpayment (orderId, paymentDate, PaymentMethod, status) 
+            VALUES ('$orderID', NOW(), '$paymthd', 'To-Ship')";
+
+        $result = mysqli_query($mysqli, $sql);
+
+        return $result;
+    }
 ?>
