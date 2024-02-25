@@ -49,11 +49,14 @@
             <table id="orders" style="display: none;">
                 <caption style="font-size: 20px; font-weight: 400; padding-bottom: 50px;">Orders</caption>
                 <thead>
-                    <th>Item Number</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Date</th>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>T-mount</th>
+                    <th>Cus-Name</th>
+                    <th>Address</th>
+                    <th>QTY</th>
+                    <th>Product Name</th>
+                    <th>Status</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -62,6 +65,9 @@
                         <td>C</td>
                         <td>D</td>
                         <td>date</td>
+                        <td>D</td>
+                        <td>D</td>
+                        <td>D</td>
                 </tbody>
             </table>
         </div>
