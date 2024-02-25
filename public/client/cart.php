@@ -32,7 +32,7 @@
                 <li><button class="button-59" role="button">LogOut</button></li>
             </a>
             </ul>
-        </div>
+        </div>  
         
     </nav>
 
