@@ -2,15 +2,15 @@
 
     require_once '../../src/models/admin/insertitem.php';   
 
-    function additem($name, $quantity, $unitprice, $img){
+    function additem($name, $quantity, $unitprice, $pathimg){        
 
-        $imageContent = file_get_contents($img);
-        $image = addslashes($imageContent);
-
-        $result = inserproduct($name, $quantity, $unitprice, $image);
+        $result = inserproduct($name, $quantity, $unitprice, $pathimg);
+        
         
         if($result){
-            echo "<script>alert('Product Add Successfull..');</script>";
+            echo "<script>alert('Add Products Succesfull...');";
+            echo "window.location.href='/public/admin/add_product.php';</script>";
+            exit; 
         }
         else{
             echo "<script>alert('Product Add Fail...');</script>";

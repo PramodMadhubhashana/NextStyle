@@ -11,7 +11,7 @@
 <body>
     <nav>
         <div style="display: flex;">
-            <label style="font-size: 30px; font-weight: 600;"><a href="../client/home.html" style="color: black;">NextStyle</a></label>
+            <label style="font-size: 30px; font-weight: 600;"><a href="../admin/adminPage.php" style="color: black;">NextStyle</a></label>
         </div>
 
         <div>

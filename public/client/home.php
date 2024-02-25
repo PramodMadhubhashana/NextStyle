@@ -56,7 +56,7 @@
 
         <div style="display: flex; flex-direction: row;">
 
-            <div style="width: 350px;border: 1px solid #000;">
+            <div style="width: 25%;border: 1px solid #000;">
                 <div style="width: 100%;  display: flex; justify-content: center; padding-top: 10px;">
                     <label style="font-size: 20px; font-weight: 300;">Filter By Price</label>
                 </div>
@@ -266,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; flex-wrap: wrap; justify-content:space-between; margin-top: 50px; align-items: start;">  
+                <div style="display: flex; flex-wrap: wrap; justify-content:start; margin-top: 50px; align-items: start; gap:3%">  
 
                     <?php                    
                         require_once '../../src/controllers/home.php';                         

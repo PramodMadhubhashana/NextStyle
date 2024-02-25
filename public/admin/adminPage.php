@@ -37,27 +37,14 @@
             </div>            
         </div>
         <div style="display: flex; flex-direction: column; ">
+            
             <table id="orderList">
-                <caption style="font-size: 20px; font-weight: 400; padding-bottom: 50px;">Order List</caption>
-                <thead>
-                    <th>Item Number</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Action</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A</td>
-                        <td>B</td>
-                        <td>C</td>
-                        <td>a</td>
-                        <td>
-                            <button onclick="editRow(this)" style="background-color: rgb(248, 119, 231);">Edit</button>
-                            <button onclick="deleteRow(this)" style="background-color: rgb(247, 120, 120);">Delete</button>
-                          </td>
-                    </tr>
-                </tbody>
+                <?php
+            
+                    require_once '../../src/controllers/admin/admintableview.php';                
+                    productTableData();           
+
+                ?>                
             </table>
             <table id="orders" style="display: none;">
                 <caption style="font-size: 20px; font-weight: 400; padding-bottom: 50px;">Orders</caption>
@@ -79,6 +66,7 @@
             </table>
         </div>
     </div>    
+    
 </body>
 <script src="../js/admin/adminPage.js"></script>
 </html>
