@@ -2,7 +2,7 @@
  
     require_once '../../php/db/mongodb.php'; 
 
-    function insertOrUpdateCart($userId, $proId, $qty, $name, $price){
+    function insertOrUpdateCart($userId, $proId, $qty, $name, $price, $img){
         global $database;       
 
         $collection = $database->selectCollection('Cart_List');
@@ -19,7 +19,8 @@
                         'productId' => $proId,
                         'quantity' => $qty,
                         'Name' => $name,
-                        'Price' => $price
+                        'Price' => $price,
+                        'img' => $img
                     ]
                 ]
             ];
@@ -31,7 +32,8 @@
                 'productId' => $proId,
                 'quantity' => $qty,
                 'Name' => $name,
-                'Price' => $price
+                'Price' => $price,
+                'img' => $img
             ];
             $result = $collection->updateOne(
                 ['userId' => $userId],

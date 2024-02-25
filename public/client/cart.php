@@ -23,7 +23,7 @@
         </diV>
         <div style="display: flex; flex-direction: row;">
             <ul style="display: flex; flex-direction: row; gap: 20px;">
-                <li><a href="#"><img src="../img/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
+                <li><a href="../../public/client/cart.php"><img src="../img/shopping-cart.png" alt="cart icon" width="24px" height="24px" /></a>
                 </li>
                 <li><a href="#"><img src="../img/magnifier.png" alt="magnifier" width="24px" height="24px" /></a></li>
                 <li><a href="#"><img src="../img/email.png" alt="email" width="24px" height="24px" /></a></li>

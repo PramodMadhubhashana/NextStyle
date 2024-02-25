@@ -15,7 +15,8 @@
                         <div style="display:flex; height: 200px; justify-content: center;">
                             <img src="<?php echo $row['img'] ?>" style="width: 200px; height: 200px; cover:fit;"/>
                         </div>
-                        <form method="post" name="itemdetails" action="../../php/client/cart.php?proId=<?php echo $row['proId'];?>&prc=<?php echo $row['unitPrice'];?>&nme=<?php echo $row['proName'];?>&uId=<?php echo $userId;?>">
+                        <form method="post" name="itemdetails" 
+                            action="../../php/client/cart.php?proId=<?php echo $row['proId'];?>&prc=<?php echo $row['unitPrice'];?>&nme=<?php echo $row['proName'];?>&uId=<?php echo $userId;?>&img=<?php echo $row['img']?>">
                             <div style="padding:20px; display: flex; flex-direction:column;  justify-content: space-between;">
                                 <div style="display: flex; flex-direction: column;">
                                     <label style="font-size: 16px;"><?php echo $row['proName']; ?></label>

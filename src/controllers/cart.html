@@ -2,9 +2,9 @@
 
     require_once '../../src/models/cart.php';   
 
-    function cart($username, $proId, $qty, $name, $price){
+    function cart($username, $proId, $qty, $name, $price, $img){
     
-        $cart = insertOrUpdateCart($username, $proId, $qty, $name, $price);
+        $cart = insertOrUpdateCart($username, $proId, $qty, $name, $price, $img);
 
         if($cart){
             ob_start();
@@ -21,9 +21,7 @@
     }
     
 
-    function cartList($userId){
-
-        require_once '../../src/models/itemlist.php';
+    function cartList($userId){       
 
         global $itemCount;
         global $totalPrice;
@@ -35,8 +33,7 @@
                       
             ?>           
                 <div class="item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4YsGROeiDVdLcw87Y2uaVJnfgMrT3ZJ1yA&usqp=CAU"
-                        alt="Product Image">
+                    <img src="<?php echo $item['img']?>" style="width: 120px; height: 120px;"/>
                     <div class="item-details">
                         <h3><?php echo $item['Name']?></h3>
                         <p>Price: $ <?php echo $item['Price'] ?></p>
@@ -64,7 +61,7 @@
                 <h3>Cart Summary</h3>
                 <p>Total Items: <?php echo $itemCount ?></p>
                 <p>Total Price: $ <?php echo $totalPrice ?></p>
-                <button>Checkout</button>
+                <button><a>Checkout</a></button>
             </div>
         <?php
     }

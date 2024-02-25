@@ -32,7 +32,7 @@
             }
         }
         else {
-            echo "<script>alert('Invalid email or 111password');";
+            echo "<script>alert('Invalid email or password');";
             echo "window.location.href='/public/client/Login.php';</script>";
             exit;
         }
