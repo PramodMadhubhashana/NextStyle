@@ -20,12 +20,6 @@
         $result = mysqli_query($mysqli, $check_query);
 
         return mysqli_num_rows($result) > 0;                
-    }
-
-
-    function loginUser($email,){
-
-    }
-
+    }   
     
 ?>

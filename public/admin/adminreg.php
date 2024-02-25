@@ -14,7 +14,7 @@
             <label style="font-size: 30px; font-weight: 600; text-decoration: underline;">NextStyle</label>
         </div>
         <div>
-            <form action="../../php/admin/adminreg.php" method="post" name="registerForm">
+            <form action="../../php/admin/adminreg.php" method="post" name="registerForm" autocomplete="off">
                 <div class="regform">
                     <label style="font-size: 18px; font-weight: 300; padding: 15px 0 15px 0;">Welcome Back !!!</label>
                     <label style="font-size: 30px; font-weight: 600;">Admin Register</label>
@@ -46,7 +46,7 @@
                         <div style="display: flex; flex-direction: column; padding-top: 30px;">
                             <button class="button-59" type="submit">Register</button>
                             <p style="margin-top: 20px; font-size: 16px;">Already have an account? <a
-                                href="login.php">Log in here</a></p>
+                                href="../admin/adminlog.php">Log in here</a></p>
                         </div>
                     </div>
                 </div>
