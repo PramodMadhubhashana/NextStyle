@@ -1,3 +1,5 @@
+/* Basic CSS styling */
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -8,16 +10,14 @@ body {
     padding: 20px;
 }
 
-.credit-card-details,
+.payment-method,
+.card-details,
 .total-amount {
     margin-bottom: 20px;
 }
 
 .form-group {
     margin-bottom: 10px;
-}
-.checkout-container h2 {
-    font-size: 35px; 
 }
 
 label {
@@ -31,20 +31,10 @@ input[type="text"] {
     border-radius: 5px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #45a049;
-}
 
-nav{
+/* You can add more styling as needed */
+nav {
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -53,12 +43,64 @@ nav{
     box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-li{
+
+li {
     list-style: none;
 }
-.list{
+
+.list {
     color: black;
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
 }
+.button-59 {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #8c82fc;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 30px;
+    justify-content: center;
+    letter-spacing: -0.8px;
+    line-height: 24px;
+    min-width: 50px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 10px;
+  }
+  
+  .button-59:focus {
+    color: #171e29;
+    border-radius: 10px;
+  }
+  
+  .button-59:hover {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+  }
+  
+  .button-59:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+  }
+  
+  @media (min-width: 768px) {
+    .button-59 {
+      min-width: 170px;
+    }
+  }
