@@ -61,7 +61,7 @@
                 <h3>Cart Summary</h3>
                 <p>Total Items: <?php echo $itemCount ?></p>
                 <p>Total Price: $ <?php echo $totalPrice ?></p>
-                <button><a>Checkout</a></button>
+                <button><a href="">Checkout</a></button>
             </div>
         <?php
     }
