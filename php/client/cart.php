@@ -8,8 +8,9 @@
         $name = $_GET['nme'];
         $price = $_GET['prc'];   
         $userId = $_GET["uId"];
+        $img = $_GET['img'];       
 
-        $crt = cart($userId, $proId, $qty, $name, $price);
+        $crt = cart($userId, $proId, $qty, $name, $price, $img);
     }
     else{
         echo "<script>alert('Try again Later');</script>";

@@ -32,7 +32,7 @@
             echo "<td>" ?>
                             <div style="display:flex; gap:20px;">
                                 <button style="background-color: rgb(248, 119, 231);">
-                                    <a style="text-decoration:none; color:black;" href="../../src/controllers/admin/deleteitem.php?proid=<?php echo $row['proId'] ?>">Delete</a>
+                                    <a style="text-decoration:none; color:black;" href="../../src/controllers/admin/productDelete.php?proid=<?php echo $row['proId'] ?>">Delete</a>
                                 </button>
                                 <button style="background-color: rgb(247, 120, 120);">
                                     <a style="text-decoration:none; color:black;" href="../../../public/admin/edit_product.php?proid=<?php echo $row['proId'] ?>">Edit</a>

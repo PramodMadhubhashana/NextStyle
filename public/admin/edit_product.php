@@ -29,14 +29,14 @@
 
         <div
             style="display: flex; flex-direction: column; background-color: rgb(202, 202, 202); width: 50%; padding: 20px; align-items:start;">
-            <form>
-                <?php
+            
+            <?php
                 
-                require_once '../../src/controllers/admin/editeproducts.php';
-                editproducts();
+            require_once '../../src/controllers/admin/editeproducts.php';
+            editproducts();
                                 
-                ?>          
-            </form>
+            ?>          
+        
         </div>
     </div> 
 </body>
