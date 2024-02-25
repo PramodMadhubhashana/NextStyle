@@ -64,7 +64,7 @@
                 <h3>Cart Summary</h3>
                 <p>Total Items: <?php echo $itemCount ?></p>
                 <p>Total Price: $ <?php echo $totalPrice ?></p>
-                <button>Checkout</button>
+                <button><a href="../../public/client/pay.php" style="text-decoration: none; color: black;">Checkout</a></button>
             </div>
         <?php
     }
