@@ -89,11 +89,10 @@
                                 </div>
                             </div>
                             <div style="padding: 20px 10px 0 10px; display: flex; justify-content: space-between;">
-                                <button class="button-32" role="button" style="background-color: #82b53f; " type="submit" >Add to cart </button>
-                                
+                            <button class="button-32" name="submitType" value="submitAll" style="background-color: #82b53f;" type="submit">Add to cart</button>
                             </div>
-                            <div style="padding: 5px 10px 0 10px ; display: flex; justify-content: space-between;">
-                                <button class="button-32" style="background-color: gray;" role="button">Buy</button>
+                            <div style="padding: 5px 10px 0 10px ; display: flex; ">
+                            <button class="button-32" name="submitType" value="submitBuyButton" style="background-color: gray;" type="submit">Buy</button> 
                             </div>
                         </form>
                     </div>

@@ -45,4 +45,11 @@ checkboxesRating.forEach(function (checkbox) {
   });
 });
 
-
+function redirectToPay(unitPrice, userId, productId) {
+  //console.log("Redirecting to pay.php with unitPrice:", unitPrice, ", userId:", userId, ", and productId:", productId);
+  var quantity = document.querySelector("input[name='qty'][data-product-id='" + productId + "']").value;
+  //console.log("Quantity:", quantity);
+  var url = '../../public/client/pay.php?totalPrice=' + unitPrice + '&uid=' + userId + '&qty=' + quantity; 
+  //console.log("Redirect URL:", url); 
+  window.location.href = url;
+}

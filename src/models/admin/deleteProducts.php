@@ -5,10 +5,17 @@
     function deleteProducts($proid){
         global $mysqli;
 
-        $sql = "DELETE FROM productdetails WHERE proId = '$proid'";
+        $deleteOrderItemsQuery = "DELETE FROM orderitem WHERE proId = '$proid'";
+        $result = mysqli_query($mysqli, $deleteOrderItemsQuery);
 
-        $result = mysqli_query($mysqli, $sql);
-        return $result;
+        if (!$result) {
+            return $result;
+        }
+        else {
+            $deleteProductQuery = "DELETE FROM productdetails WHERE proId = '$proid'";
+            $results = mysqli_query($mysqli, $deleteProductQuery);
+            return $results;
+        }
         
     }
 ?>

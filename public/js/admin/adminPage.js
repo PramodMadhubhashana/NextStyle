@@ -1,12 +1,7 @@
 function orderList() {
-  var orderList = document.getElementById("orderList");
-  var orders = document.getElementById("orders");
-  orderList.style.display = "table";
-  orders.style.display = "none";
+  window.location.href = "../../../public/admin/adminPage.php";
 }
 function orders() {
-  var orderList = document.getElementById("orderList");
-  var orders = document.getElementById("orders");
-  orderList.style.display = "none";
-  orders.style.display = "table";
+  window.location.href = "../../../public/admin/orderstable.php";
 }
+

@@ -35,7 +35,7 @@
                 <div class="item">
                     <img src="<?php echo $item['img']?>" style="width: 120px; height: 120px;"/>
                     <div class="item-details">
-                        <h3><?php echo $item['Name']?></h3>
+                        <h3><?php echo $item['Name']?></h3>                        
                         <p>Price: $ <?php echo $item['Price'] ?></p>
                         <div class="quantity-selector">
                             <button class="quantity-button minus">-</button>
@@ -61,7 +61,7 @@
                 <h3>Cart Summary</h3>
                 <p>Total Items: <?php echo $itemCount ?></p>
                 <p>Total Price: $ <?php echo $totalPrice ?></p>
-
+                <button><a href="../../public/client/pay.php?tpric=<?php echo $totalPrice?>&uid=<?php echo $userId?>" style="text-decoration: none; color: black;">CheckOut</a></button>
             </div>
         <?php
     }
