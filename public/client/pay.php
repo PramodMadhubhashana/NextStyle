@@ -34,17 +34,11 @@
             </ul>
         </div>
 
-    </nav>
-
-    <div class="checkout-container">
-        <h2>Checkout</h2>
+    </nav>    
         <?php
             require_once '../../src/controllers/pay.php';
             pay();        
         ?>
-        
-    </div>
-    
     <script src="../js/client/pay.js"></script>
 </body>
 

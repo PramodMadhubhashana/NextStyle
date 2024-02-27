@@ -28,7 +28,7 @@
             echo "<td>" . $row['unitPrice'] . "</td>"; 
             echo "<td>"?>
                             <img src="<?php echo $row['img'] ?>" style="width: 50px; height: 50px;"/>    
-                        <?php "<td>";
+                        <?php "</td>";
             echo "<td>" ?>
                             <div style="display:flex; gap:20px;">
                                 <button style="background-color: rgb(248, 119, 231);">
@@ -38,7 +38,8 @@
                                     <a style="text-decoration:none; color:black;" href="../../../public/admin/edit_product.php?proid=<?php echo $row['proId'] ?>">Edit</a>
                                 </button>
                             </div>
-                        <?php           
+                        <?php  
+                    "</td>" ;        
             echo "</tr>";
                       
         }        
@@ -46,7 +47,38 @@
     }
 
 
+    function ordersTable(){
+        
+        $result =  ordersdata(); 
+        
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
 
-
+                echo "<tr>";
+                echo "<td>" . $row['orderId'] . "</td>";
+                echo "<td>" . $row['orderDate'] . "</td>";
+                echo "<td>" . $row['totalAmount'] . "</td>";
+                echo "<td>" . $row['userName'] . "</td>"; 
+                echo "<td>" . $row['address'] . "</td>";
+                echo "<td>" . $row['itemQty'] . "</td>";
+                echo "<td>" . $row['proName'] . "</td>";
+                echo "<td>"?>
+                            <form action='../../../src/controllers/admin/updatestatus.php' method='post'>
+                                <input type='hidden' name='orderId' value='" . $row['orderId'] . "'>
+                                <select name='newStatus'>
+                                    <option value='Pending'>To-ship</option>
+                                    <option value='Processing'>Processing</option>
+                                    <option value='Completed'>Shiped</option>
+                                </select>
+                                <button type='submit'>Change Status</button>
+                            </form>
+                        <?php
+                    "</td>";
+                echo "</tr>";               
+            }
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
+    }
 ?>
 

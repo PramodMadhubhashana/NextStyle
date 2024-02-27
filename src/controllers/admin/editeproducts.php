@@ -17,7 +17,8 @@
         }        
 
         ?>
-            <form  action="../../php/admin/edititem.php" method="post" name="editform">
+            <form method="post" action="../../php/admin/edititem.php" name="additemform" enctype="multipart/form-data">
+
                 <label style="font-size: 20px;font-weight: 300; padding: 10px;">Enter Product Name</label>
                 <input type="text" placeholder="Enter Product Name" class="textbox" name="product Name" id="ProductName"
                     value="<?php echo $row['proName']?>"    required>
@@ -35,7 +36,7 @@
                 
 
                 <div style="padding: 10px; width: 100%; display: flex; justify-content: center;">
-                    <button class="button-59" role="button" type="submit">Update</button>
+                    <button class="button-59" role="button" type="submit" name="submit">Update</button>
                 </div>   
                 
             </form>        

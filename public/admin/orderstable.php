@@ -36,17 +36,9 @@
                 <li><a href="#"><img src="../img/package2.png" alt="user" width="24px" height="24px"  style="padding: 10px;"/></a></li>
             </div>            
         </div>
-        <div style="display: flex; flex-direction: column; ">
+        <div style="display: flex; flex-direction: column; ">            
             
-            <table id="orderList">
-                <?php
-            
-                    require_once '../../src/controllers/admin/admintableview.php';                
-                    productTableData();           
-
-                ?>                
-            </table>
-            <table id="orders" style="display: none;">
+            <table id="orders">
 
                 <caption style="font-size: 20px; font-weight: 400; padding-bottom: 50px;">Orders</caption>
                 <thead>
@@ -59,6 +51,11 @@
                     <th>Product Name</th>
                     <th>Status</th>
                 </thead>
+
+                <?php                
+                    require_once '../../src/controllers/admin/admintableview.php'; 
+                    ordersTable();     
+                ?>
             
             </table>
         </div>
