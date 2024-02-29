@@ -34,7 +34,7 @@
         else {           
             
             echo "<script>alert('Invalid email or password');";
-            echo "window.location.href='/public/client/adminlog.php';</script>";
+            echo "window.location.href='/public/admin/adminlog.php';</script>";
             exit;
         }
     }
