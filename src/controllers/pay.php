@@ -33,7 +33,7 @@
                         <p>$ <?php echo $tprice?></p> 
                     </div>
                             
-                    <button type="submit">submit</button>
+                    <button type="submit">Buy</button>
 
                 </form>
             </div>
