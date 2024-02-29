@@ -33,7 +33,7 @@
                         <div style="display: flex; flex-direction: column; padding-top: 30px;">
                             <button class="button-59" type="submit">Login</button>
                             <p style="margin-top: 20px; font-size: 16px;">Don't have an account? <a
-                                    href="../client/register.php">Register here</a></p>
+                                    href="../admin/adminreg.php">Register here</a></p>
                         </div>
                     </div>
                 </div>
