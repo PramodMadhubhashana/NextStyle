@@ -2,8 +2,9 @@
 
     require_once '../../src/controllers/admin/updateproduct.php'; 
 
-    if(isset($_POST["submit"])) {
+    if(isset($_POST["submit"]) && isset($_GET['proId'])) {
 
+        $proId = $_GET['proId'];
         $pnme = $_POST['product_Name'];
         $qty = $_POST['Quantity'];
         $uprc = $_POST['Price'];
@@ -12,9 +13,9 @@
 
         $upload_dir = "../../public/img/productImage/";
         $upload_path = $upload_dir . basename($image_name);
-        move_uploaded_file($image_tmp, $upload_path);        
-
-        $updatedata = updateProduct($pnme, $qty, $uprc, $upload_path, $proId);
+        move_uploaded_file($image_tmp, $upload_path); 
+    
+        $updatedata = updateProductDetails($pnme, $qty, $uprc, $upload_path, $proId);
     }
     
 
