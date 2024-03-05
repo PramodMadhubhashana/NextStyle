@@ -17,7 +17,7 @@
         }        
 
         ?>
-            <form method="post" action="../../php/admin/edititem.php" name="additemform" enctype="multipart/form-data">
+            <form method="post" action="../../php/admin/edititem.php?proId=<?php echo $proId?>" name="additemform" enctype="multipart/form-data">
 
                 <label style="font-size: 20px;font-weight: 300; padding: 10px;">Enter Product Name</label>
                 <input type="text" placeholder="Enter Product Name" class="textbox" name="product Name" id="ProductName"

@@ -63,12 +63,12 @@
                 echo "<td>" . $row['itemQty'] . "</td>";
                 echo "<td>" . $row['proName'] . "</td>";
                 echo "<td>"?>
-                            <form action='../../../src/controllers/admin/updatestatus.php' method='post'>
-                                <input type='hidden' name='orderId' value='" . $row['orderId'] . "'>
+                            <form action='../../../src/controllers/admin/status.php' method='post'>
+                                <input type='hidden' name='orderId' value='<?php echo $row['orderId']?>'>
                                 <select name='newStatus'>
-                                    <option value='Pending'>To-ship</option>
-                                    <option value='Processing'>Processing</option>
-                                    <option value='Completed'>Shiped</option>
+                                <option value='Pending' <?php if ($row['status'] == 'Pending') echo 'selected'; ?>>To-ship</option>
+                                <option value='Processing' <?php if ($row['status'] == 'Processing') echo 'selected'; ?>>Processing</option>
+                                <option value='Completed' <?php if ($row['status'] == 'Completed') echo 'selected'; ?>>Shipped</option>
                                 </select>
                                 <button type='submit'>Change Status</button>
                             </form>

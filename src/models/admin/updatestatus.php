@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../../php/db/mysql.php';  
+    require_once '../../../php/db/mysql.php'; 
 
     function updatestus($orderId, $newStatus){
         global $mysqli;
@@ -11,7 +11,5 @@
 
         return $result;
     }
-
-
 
 ?>
